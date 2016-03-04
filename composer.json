@@ -1,0 +1,27 @@
+{
+  "name": "edmondscommerce/behat-screenshot-context",
+  "description": "A Behat Context for taking screenshots",
+  "keywords": [
+    "Behat",
+    "Testing",
+    "Browser Testing",
+    "Screenshot"
+  ],
+  "homepage": "https://www.edmondscommerce.co.uk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "edmondscommerce",
+      "email": "info@edmondscommerce.co.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "suggest": {
+    "edmondscommerce/behat-framework": "Parent framework, allows easier behat setup"
+  },
+  "autoload": {
+    "psr-4": {
+      "EdmondsCommerce\\BehatScreenshotContext\\": "src/"
+    }
+  }
+}
