@@ -1,6 +1,7 @@
 <?php namespace EdmondsCommerce\BehatScreenshotContext;
 
 use Behat\MinkExtension\Context\RawMinkContext;
+use DMore\ChromeDriver\ChromeDriver;
 
 class ScreenshotContext extends RawMinkContext
 {
@@ -37,7 +38,7 @@ class ScreenshotContext extends RawMinkContext
     {
         $fileName = $this->setExtension($fileName);
         $driver = $this->getSession()->getDriver();
-        if ($driver instanceof \Behat\Mink\Driver\Selenium2Driver)
+        if ($driver instanceof \Behat\Mink\Driver\Selenium2Driver || $driver instanceof \DMore\ChromeDriver\ChromeDriver)
         {
             file_put_contents($fileName, $this->getSession()->getDriver()->getScreenshot());
             echo "Screenshot saved to ".$fileName;
